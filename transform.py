@@ -10,7 +10,7 @@ def transform(data):
             continue
 
         # 2. Cast types
-        row["quantity"] = float(row["quantity"])
+        row["quantity"] = int(row["quantity"])
         row["price"]    = float(row["price"])
 
         # 3. Add derived column: total_revenue
@@ -29,3 +29,5 @@ if __name__ == "__main__":
     raw  = extract()
     clean = transform(raw)
     print(f"Sample transformed row: {clean[0]}")
+
+    #add if any functions are needed for advanced cleaning tasks
