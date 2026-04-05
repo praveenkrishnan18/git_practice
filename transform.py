@@ -10,7 +10,7 @@ def transform(data):
             continue
 
         # 2. Cast types
-        row["quantity"] = int(row["quantity"])
+        row["quantity"] = float(row["quantity"])
         row["price"]    = float(row["price"])
 
         # 3. Add derived column: total_revenue
